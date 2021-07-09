@@ -1,0 +1,17 @@
+<deegreeWFS xmlns="http://www.deegree.org/services/wfs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" configVersion="3.2.0" xsi:schemaLocation="http://www.deegree.org/services/wfs http://schemas.deegree.org/services/wfs/3.2.0/wfs_configuration.xsd">
+  <SupportedVersions>
+    <Version>1.1.0</Version>
+  </SupportedVersions>
+  <FeatureStoreId>inspire</FeatureStoreId>
+  <EnableTransactions>false</EnableTransactions>
+  <QueryCRS>urn:ogc:def:crs:EPSG::4326</QueryCRS>
+  <GMLFormat gmlVersion="GML_31">
+    <MimeType>application/gml+xml; version=3.1</MimeType>
+    <MimeType>application/xml; subtype="gml/3.1.1"</MimeType>
+    <GetFeatureResponse>
+<!--baseURL="http://inspire.ec.europa.eu/schemas/ps/3.0/ProtectedSites.xsd"-->
+      <DisableDynamicSchema>true</DisableDynamicSchema>
+      <DisableStreaming>true</DisableStreaming>
+    </GetFeatureResponse>
+  </GMLFormat>
+</deegreeWFS>
