@@ -1,0 +1,355 @@
+<SQLFeatureStore xmlns="http://www.deegree.org/datasource/feature/sql" xmlns:tn="urn:x-inspire:specification:gmlas:CommonTransportElements:3.0" xmlns:sd="urn:x-inspire:specification:gmlas:SpeciesDistribution:0.0" xmlns:ps-f="urn:x-inspire:specification:gmlas:ProtectedSitesFull:3.0" xmlns:hb="urn:x-inspire:specification:gmlas:HabitatsAndBiotopes:0.0" xmlns:net="urn:x-inspire:specification:gmlas:Network:3.2" xmlns:bgr="urn:x-inspire:specification:gmlas:BiogeographicalRegions:0.0" xmlns:gn="urn:x-inspire:specification:gmlas:GeographicalNames:3.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:base="urn:x-inspire:specification:gmlas:BaseTypes:3.2" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:bui="urn:x-inspire:specification:gmlas:Buildings:0.0" xmlns:tn-a="urn:x-inspire:specification:gmlas:AirTransportNetwork:3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ps="urn:x-inspire:specification:gmlas:ProtectedSites:3.0" configVersion="3.1.0" xsi:schemaLocation="http://www.deegree.org/datasource/feature/sql http://schemas.deegree.org/datasource/feature/sql/3.1.0/sql.xsd">
+  <JDBCConnId>cite</JDBCConnId>
+  <StorageCRS srid="-1" dim="2D">urn:ogc:def:crs:EPSG::28992</StorageCRS>
+  <GMLSchema>http://inspire.ec.europa.eu/schemas/gn/3.0/GeographicalNames.xsd</GMLSchema>
+  <GMLSchema>http://inspire.ec.europa.eu/schemas/ps/3.0/ProtectedSites.xsd</GMLSchema>
+  
+  <FeatureTypeMapping name="gn:NamedPlace" table="gn_namedplace">
+    <FIDMapping prefix="GN_NAMEDPLACE_">
+      <Column name="attr_gml_id" type="string"/>
+      <UUIDGenerator/>
+    </FIDMapping>
+    <Complex path="gml:identifier">
+      <Primitive path="text()" mapping="gml_identifier"/>
+      <Primitive path="@codeSpace" mapping="gml_identifier_attr_codespace"/>
+    </Complex>
+    <Complex path="gn:beginLifespanVersion">
+      <Primitive path="text()" mapping="gn_beginlifespanversion"/>
+      <Primitive path="@nilReason" mapping="gn_beginlifespanversion_attr_nilreason"/>
+      <Primitive path="@xsi:nil" mapping="gn_beginlifespanversion_attr_xsi_nil"/>
+    </Complex>
+    <Complex path="gn:endLifespanVersion">
+      <Primitive path="text()" mapping="gn_endlifespanversion"/>
+      <Primitive path="@nilReason" mapping="gn_endlifespanversion_attr_nilreason"/>
+      <Primitive path="@xsi:nil" mapping="gn_endlifespanversion_attr_xsi_nil"/>
+    </Complex>
+    <Complex path="gn:geometry">
+      <Primitive path="@nilReason" mapping="gn_geometry_attr_nilreason"/>
+      <Primitive path="@gml:remoteSchema" mapping="gn_geometry_attr_gml_remoteschema"/>
+      <Primitive path="@owns" mapping="gn_geometry_attr_owns"/>
+      <Geometry path="." mapping="gn_geometry_value"/>
+    </Complex>
+    <Complex path="gn:inspireId">
+      <Complex path="base:Identifier">
+        <Primitive path="base:localId" mapping="gn_inspireid_base_identifier_base_localid"/>
+        <Primitive path="base:namespace" mapping="gn_inspireid_base_identifier_base_namespace"/>
+        <Complex path="base:versionId">
+          <Primitive path="text()" mapping="gn_inspireid_base_identifier_base_versionid"/>
+          <Primitive path="@nilReason" mapping="gn_inspireid_base_identifier_base_versionid_attr_nilreason"/>
+          <Primitive path="@xsi:nil" mapping="gn_inspireid_base_identifier_base_versionid_attr_xsi_nil"/>
+        </Complex>
+      </Complex>
+    </Complex>
+    <Complex path="gn:leastDetailedViewingResolution">
+      <Primitive path="@nilReason" mapping="gn_leastdetailedviewingresolution_attr_nilreason"/>
+      <Primitive path="@owns" mapping="gn_leastdetailedviewingresolution_attr_owns"/>
+      <Primitive path="@xsi:nil" mapping="gn_leastdetailedviewingresolution_attr_xsi_nil"/>
+      <Complex path="gmd:MD_Resolution">
+        <Complex path="gmd:equivalentScale">
+          <Primitive path="@xlink:type" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_825"/>
+          <Primitive path="@xlink:href" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_826"/>
+          <Primitive path="@xlink:role" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_827"/>
+          <Primitive path="@xlink:arcrole" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_828"/>
+          <Primitive path="@xlink:title" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_829"/>
+          <Primitive path="@xlink:show" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_830"/>
+          <Primitive path="@xlink:actuate" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_831"/>
+          <Primitive path="@uuidref" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_832"/>
+          <Primitive path="@gco:nilReason" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_833"/>
+          <Complex path="gmd:MD_RepresentativeFraction">
+            <Primitive path="@id" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_835"/>
+            <Primitive path="@uuid" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_836"/>
+            <Complex path="gmd:denominator">
+              <Primitive path="@gco:nilReason" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_838"/>
+              <Primitive path="gco:Integer" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_e_839"/>
+            </Complex>
+          </Complex>
+        </Complex>
+        <Complex path="gmd:distance">
+          <Primitive path="@gco:nilReason" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_d_841"/>
+          <Complex path="gco:Distance">
+            <Primitive path="text()" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_d_842"/>
+            <Primitive path="@uom" mapping="gn_leastdetailedviewingresolution_gmd_md_resolution_gmd_d_843"/>
+          </Complex>
+        </Complex>
+      </Complex>
+    </Complex>
+    <Complex path="gn:localType">
+      <Join table="gn_namedplace_gn_localtype" fromColumns="attr_gml_id" toColumns="parentfk" orderColumns="num" numbered="true"/>
+      <Primitive path="@xlink:type" mapping="attr_xlink_type"/>
+      <Primitive path="@xlink:href" mapping="attr_xlink_href"/>
+      <Primitive path="@xlink:role" mapping="attr_xlink_role"/>
+      <Primitive path="@xlink:arcrole" mapping="attr_xlink_arcrole"/>
+      <Primitive path="@xlink:title" mapping="attr_xlink_title"/>
+      <Primitive path="@xlink:show" mapping="attr_xlink_show"/>
+      <Primitive path="@xlink:actuate" mapping="attr_xlink_actuate"/>
+      <Primitive path="@uuidref" mapping="attr_uuidref"/>
+      <Primitive path="@gco:nilReason" mapping="attr_gco_nilreason"/>
+      <Primitive path="@xsi:nil" mapping="attr_xsi_nil"/>
+      <Complex path="gmd:LocalisedCharacterString">
+        <Primitive path="text()" mapping="gmd_localisedcharacterstring"/>
+        <Primitive path="@id" mapping="gmd_localisedcharacterstring_attr_id"/>
+        <Primitive path="@locale" mapping="gmd_localisedcharacterstring_attr_locale"/>
+      </Complex>
+    </Complex>
+    <Complex path="gn:mostDetailedViewingResolution">
+      <Primitive path="@nilReason" mapping="gn_mostdetailedviewingresolution_attr_nilreason"/>
+      <Primitive path="@owns" mapping="gn_mostdetailedviewingresolution_attr_owns"/>
+      <Primitive path="@xsi:nil" mapping="gn_mostdetailedviewingresolution_attr_xsi_nil"/>
+      <Complex path="gmd:MD_Resolution">
+        <Complex path="gmd:equivalentScale">
+          <Primitive path="@xlink:type" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_845"/>
+          <Primitive path="@xlink:href" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_846"/>
+          <Primitive path="@xlink:role" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_847"/>
+          <Primitive path="@xlink:arcrole" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_848"/>
+          <Primitive path="@xlink:title" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_849"/>
+          <Primitive path="@xlink:show" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_850"/>
+          <Primitive path="@xlink:actuate" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_851"/>
+          <Primitive path="@uuidref" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_852"/>
+          <Primitive path="@gco:nilReason" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_853"/>
+          <Complex path="gmd:MD_RepresentativeFraction">
+            <Primitive path="@id" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_855"/>
+            <Primitive path="@uuid" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_856"/>
+            <Complex path="gmd:denominator">
+              <Primitive path="@gco:nilReason" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_858"/>
+              <Primitive path="gco:Integer" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_eq_859"/>
+            </Complex>
+          </Complex>
+        </Complex>
+        <Complex path="gmd:distance">
+          <Primitive path="@gco:nilReason" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_di_861"/>
+          <Complex path="gco:Distance">
+            <Primitive path="text()" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_di_862"/>
+            <Primitive path="@uom" mapping="gn_mostdetailedviewingresolution_gmd_md_resolution_gmd_di_863"/>
+          </Complex>
+        </Complex>
+      </Complex>
+    </Complex>
+    <Complex path="gn:name">
+      <Join table="gn_namedplace_gn_name" fromColumns="attr_gml_id" toColumns="parentfk" orderColumns="num" numbered="true"/>
+      <Complex path="gn:GeographicalName">
+        <Complex path="gn:language">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_language"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_language_attr_nilreason"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_language_attr_xsi_nil"/>
+        </Complex>
+        <Complex path="gn:nativeness">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_nativeness"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_nativeness_attr_nilreason"/>
+          <Primitive path="@codeSpace" mapping="gn_geographicalname_gn_nativeness_attr_codespace"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_nativeness_attr_xsi_nil"/>
+        </Complex>
+        <Complex path="gn:nameStatus">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_namestatus"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_namestatus_attr_nilreason"/>
+          <Primitive path="@codeSpace" mapping="gn_geographicalname_gn_namestatus_attr_codespace"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_namestatus_attr_xsi_nil"/>
+        </Complex>
+        <Complex path="gn:sourceOfName">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_sourceofname"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_sourceofname_attr_nilreason"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_sourceofname_attr_xsi_nil"/>
+        </Complex>
+        <Complex path="gn:pronunciation">
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_pronunciation_attr_nilreason"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_pronunciation_attr_xsi_nil"/>
+          <Complex path="gn:PronunciationOfName">
+            <Complex path="gn:pronunciationSoundLink">
+              <Primitive path="text()" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_864"/>
+              <Primitive path="@nilReason" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_865"/>
+              <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_866"/>
+            </Complex>
+            <Complex path="gn:pronunciationIPA">
+              <Primitive path="text()" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_867"/>
+              <Primitive path="@nilReason" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_868"/>
+              <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_869"/>
+            </Complex>
+          </Complex>
+        </Complex>
+        <Complex path="gn:spelling">
+          <Join table="gn_namedplace_gn_name_gn_geographicalname_gn_spelling" fromColumns="id" toColumns="parentfk" orderColumns="num" numbered="true"/>
+          <Complex path="gn:SpellingOfName">
+            <Primitive path="gn:text" mapping="gn_geographicalname_gn_spellingofname_gn_text"/>
+            <Complex path="gn:script">
+              <Primitive path="text()" mapping="gn_geographicalname_gn_spellingofname_gn_script"/>
+              <Primitive path="@nilReason" mapping="gn_geographicalname_gn_spellingofname_gn_script_attr_nilreason"/>
+              <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_spellingofname_gn_script_attr_xsi_nil"/>
+            </Complex>
+            <Complex path="gn:transliterationScheme">
+              <Primitive path="text()" mapping="gn_geographicalname_gn_spellingofname_gn_transliterationscheme"/>
+              <Primitive path="@nilReason" mapping="gn_geographicalname_gn_spellingofname_gn_transliterations_870"/>
+              <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_spellingofname_gn_transliterations_871"/>
+            </Complex>
+          </Complex>
+        </Complex>
+        <Complex path="gn:grammaticalGender">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_grammaticalgender"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_grammaticalgender_attr_nilreason"/>
+          <Primitive path="@codeSpace" mapping="gn_geographicalname_gn_grammaticalgender_attr_codespace"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_grammaticalgender_attr_xsi_nil"/>
+        </Complex>
+        <Complex path="gn:grammaticalNumber">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_grammaticalnumber"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_grammaticalnumber_attr_nilreason"/>
+          <Primitive path="@codeSpace" mapping="gn_geographicalname_gn_grammaticalnumber_attr_codespace"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_grammaticalnumber_attr_xsi_nil"/>
+        </Complex>
+      </Complex>
+    </Complex>
+    <Complex path="gn:relatedSpatialObject">
+      <Join table="gn_namedplace_gn_relatedspatialobject" fromColumns="attr_gml_id" toColumns="parentfk" orderColumns="num" numbered="true"/>
+      <Primitive path="@nilReason" mapping="attr_nilreason"/>
+      <Primitive path="@xsi:nil" mapping="attr_xsi_nil"/>
+      <Complex path="base:Identifier">
+        <Primitive path="base:localId" mapping="base_identifier_base_localid"/>
+        <Primitive path="base:namespace" mapping="base_identifier_base_namespace"/>
+        <Complex path="base:versionId">
+          <Primitive path="text()" mapping="base_identifier_base_versionid"/>
+          <Primitive path="@nilReason" mapping="base_identifier_base_versionid_attr_nilreason"/>
+          <Primitive path="@xsi:nil" mapping="base_identifier_base_versionid_attr_xsi_nil"/>
+        </Complex>
+      </Complex>
+    </Complex>
+    <Complex path="gn:type">
+      <Join table="gn_namedplace_gn_type" fromColumns="attr_gml_id" toColumns="parentfk" orderColumns="num" numbered="true"/>
+      <Primitive path="text()" mapping="value"/>
+      <Primitive path="@nilReason" mapping="attr_nilreason"/>
+      <Primitive path="@codeSpace" mapping="attr_codespace"/>
+      <Primitive path="@xsi:nil" mapping="attr_xsi_nil"/>
+    </Complex>
+  </FeatureTypeMapping>
+ 
+  
+  <FeatureTypeMapping name="ps:ProtectedSite" table="ps_protectedsite">
+    <FIDMapping prefix="PS_PROTECTEDSITE_">
+      <Column name="attr_gml_id" type="string"/>
+      <UUIDGenerator/>
+    </FIDMapping>
+    <Complex path="gml:identifier">
+      <Primitive path="text()" mapping="gml_identifier"/>
+      <Primitive path="@codeSpace" mapping="gml_identifier_attr_codespace"/>
+    </Complex>
+    <Complex path="ps:geometry">
+      <Primitive path="@nilReason" mapping="ps_geometry_attr_nilreason"/>
+      <Primitive path="@gml:remoteSchema" mapping="ps_geometry_attr_gml_remoteschema"/>
+      <Primitive path="@owns" mapping="ps_geometry_attr_owns"/>
+      <Geometry path="." mapping="ps_geometry_value"/>
+    </Complex>
+    <Complex path="ps:inspireID">
+      <Complex path="base:Identifier">
+        <Primitive path="base:localId" mapping="ps_inspireid_base_identifier_base_localid"/>
+        <Primitive path="base:namespace" mapping="ps_inspireid_base_identifier_base_namespace"/>
+        <Complex path="base:versionId">
+          <Primitive path="text()" mapping="ps_inspireid_base_identifier_base_versionid"/>
+          <Primitive path="@nilReason" mapping="ps_inspireid_base_identifier_base_versionid_attr_nilreason"/>
+          <Primitive path="@xsi:nil" mapping="ps_inspireid_base_identifier_base_versionid_attr_xsi_nil"/>
+        </Complex>
+      </Complex>
+    </Complex>
+    <Complex path="ps:legalFoundationDate">
+      <Primitive path="text()" mapping="ps_legalfoundationdate"/>
+      <Primitive path="@nilReason" mapping="ps_legalfoundationdate_attr_nilreason"/>
+      <Primitive path="@xsi:nil" mapping="ps_legalfoundationdate_attr_xsi_nil"/>
+    </Complex>
+    <Complex path="ps:legalFoundationDocument">
+      
+      <Primitive path="@nilReason" mapping="ps_legalfoundationdocument_attr_nilreason"/>
+      <Primitive path="@xsi:nil" mapping="'true'"/>
+    </Complex>
+    <Complex path="ps:siteDesignation">
+      <Join table="ps_protectedsite_ps_sitedesignation" fromColumns="attr_gml_id" toColumns="parentfk" orderColumns="num" numbered="true"/>
+      <Primitive path="@nilReason" mapping="attr_nilreason"/>
+      <Primitive path="@xsi:nil" mapping="attr_xsi_nil"/>
+      <Complex path="ps:DesignationType">
+        <Complex path="ps:designationScheme">
+          <Primitive path="text()" mapping="ps_designationtype_ps_designationscheme"/>
+          <Primitive path="@codeSpace" mapping="ps_designationtype_ps_designationscheme_attr_codespace"/>
+        </Complex>
+        <Complex path="ps:designation">
+          <Primitive path="text()" mapping="ps_designationtype_ps_designation"/>
+          <Primitive path="@codeSpace" mapping="ps_designationtype_ps_designation_attr_codespace"/>
+        </Complex>
+        <Primitive path="ps:percentageUnderDesignation" mapping="ps_designationtype_ps_percentageunderdesignation"/>
+      </Complex>
+    </Complex>
+    <Complex path="ps:siteName">
+      <Join table="ps_protectedsite_ps_sitename" fromColumns="attr_gml_id" toColumns="parentfk" orderColumns="num" numbered="true"/>
+      <Primitive path="@nilReason" mapping="attr_nilreason"/>
+      <Primitive path="@xsi:nil" mapping="attr_xsi_nil"/>
+      <Complex path="gn:GeographicalName">
+        <Complex path="gn:language">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_language"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_language_attr_nilreason"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_language_attr_xsi_nil"/>
+        </Complex>
+        <Complex path="gn:nativeness">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_nativeness"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_nativeness_attr_nilreason"/>
+          <Primitive path="@codeSpace" mapping="gn_geographicalname_gn_nativeness_attr_codespace"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_nativeness_attr_xsi_nil"/>
+        </Complex>
+        <Complex path="gn:nameStatus">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_namestatus"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_namestatus_attr_nilreason"/>
+          <Primitive path="@codeSpace" mapping="gn_geographicalname_gn_namestatus_attr_codespace"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_namestatus_attr_xsi_nil"/>
+        </Complex>
+        <Complex path="gn:sourceOfName">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_sourceofname"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_sourceofname_attr_nilreason"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_sourceofname_attr_xsi_nil"/>
+        </Complex>
+        <Complex path="gn:pronunciation">
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_pronunciation_attr_nilreason"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_pronunciation_attr_xsi_nil"/>
+          <Complex path="gn:PronunciationOfName">
+            <Complex path="gn:pronunciationSoundLink">
+              <Primitive path="text()" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_775"/>
+              <Primitive path="@nilReason" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_776"/>
+              <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_777"/>
+            </Complex>
+            <Complex path="gn:pronunciationIPA">
+              <Primitive path="text()" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_778"/>
+              <Primitive path="@nilReason" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_779"/>
+              <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_pronunciation_gn_pronunciationofna_780"/>
+            </Complex>
+          </Complex>
+        </Complex>
+        <Complex path="gn:spelling">
+          <Join table="ps_protectedsite_ps_sitename_gn_geographicalname_gn_spelling" fromColumns="id" toColumns="parentfk" orderColumns="num" numbered="true"/>
+          <Complex path="gn:SpellingOfName">
+            <Primitive path="gn:text" mapping="gn_geographicalname_gn_spellingofname_gn_text"/>
+            <Complex path="gn:script">
+              <Primitive path="text()" mapping="gn_geographicalname_gn_spellingofname_gn_script"/>
+              <Primitive path="@nilReason" mapping="gn_geographicalname_gn_spellingofname_gn_script_attr_nilreason"/>
+              <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_spellingofname_gn_script_attr_xsi_nil"/>
+            </Complex>
+            <Complex path="gn:transliterationScheme">
+              <Primitive path="text()" mapping="gn_geographicalname_gn_spellingofname_gn_transliterationscheme"/>
+              <Primitive path="@nilReason" mapping="gn_geographicalname_gn_spellingofname_gn_transliterations_781"/>
+              <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_spellingofname_gn_transliterations_782"/>
+            </Complex>
+          </Complex>
+        </Complex>
+        <Complex path="gn:grammaticalGender">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_grammaticalgender"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_grammaticalgender_attr_nilreason"/>
+          <Primitive path="@codeSpace" mapping="gn_geographicalname_gn_grammaticalgender_attr_codespace"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_grammaticalgender_attr_xsi_nil"/>
+        </Complex>
+        <Complex path="gn:grammaticalNumber">
+          <Primitive path="text()" mapping="gn_geographicalname_gn_grammaticalnumber"/>
+          <Primitive path="@nilReason" mapping="gn_geographicalname_gn_grammaticalnumber_attr_nilreason"/>
+          <Primitive path="@codeSpace" mapping="gn_geographicalname_gn_grammaticalnumber_attr_codespace"/>
+          <Primitive path="@xsi:nil" mapping="gn_geographicalname_gn_grammaticalnumber_attr_xsi_nil"/>
+        </Complex>
+      </Complex>
+    </Complex>
+    <Complex path="ps:siteProtectionClassification">
+      <Join table="ps_protectedsite_ps_siteprotectionclassification" fromColumns="attr_gml_id" toColumns="parentfk" orderColumns="num" numbered="true"/>
+      <Primitive path="text()" mapping="value"/>
+      <Primitive path="@nilReason" mapping="attr_nilreason"/>
+      <Primitive path="@xsi:nil" mapping="attr_xsi_nil"/>
+    </Complex>
+  </FeatureTypeMapping>
+  
+</SQLFeatureStore>
