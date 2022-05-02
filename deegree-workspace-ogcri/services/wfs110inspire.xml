@@ -3,7 +3,7 @@
     <Version>1.1.0</Version>
   </SupportedVersions>
   <FeatureStoreId>inspire</FeatureStoreId>
-  <EnableTransactions>true</EnableTransactions>
+  <EnableTransactions>false</EnableTransactions>
   <EnableResponseBuffering>true</EnableResponseBuffering>
   <QueryCRS>urn:ogc:def:crs:EPSG::4326</QueryCRS>
   <GMLFormat gmlVersion="GML_31">
