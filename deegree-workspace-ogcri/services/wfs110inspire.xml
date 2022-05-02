@@ -3,7 +3,8 @@
     <Version>1.1.0</Version>
   </SupportedVersions>
   <FeatureStoreId>inspire</FeatureStoreId>
-  <EnableTransactions>false</EnableTransactions>
+  <EnableTransactions>true</EnableTransactions>
+  <EnableResponseBuffering>true</EnableResponseBuffering>
   <QueryCRS>urn:ogc:def:crs:EPSG::4326</QueryCRS>
   <GMLFormat gmlVersion="GML_31">
     <MimeType>application/gml+xml; version=3.1</MimeType>
@@ -14,4 +15,5 @@
       <DisableStreaming>true</DisableStreaming>
     </GetFeatureResponse>
   </GMLFormat>
+  <Strict>true</Strict>
 </deegreeWFS>

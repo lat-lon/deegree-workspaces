@@ -7,6 +7,7 @@
   <FeatureStoreId>roadsegments</FeatureStoreId>
   <FeatureStoreId>streams</FeatureStoreId>-->
   <EnableTransactions>false</EnableTransactions>
+  <EnableResponseBuffering>true</EnableResponseBuffering>
   <QueryCRS>urn:ogc:def:crs:EPSG::4326</QueryCRS>
   <GMLFormat gmlVersion="GML_32">
     <MimeType>application/gml+xml; version=3.2</MimeType>
@@ -17,4 +18,5 @@
       <DisableStreaming>true</DisableStreaming>
     </GetFeatureResponse>
   </GMLFormat>
+  <Strict>true</Strict>
 </deegreeWFS>

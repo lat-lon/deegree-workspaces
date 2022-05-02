@@ -6,7 +6,8 @@
   </SupportedVersions>
   <FeatureStoreId>cite100</FeatureStoreId>
   <EnableTransactions>true</EnableTransactions>
-  <DisableResponseBuffering>true</DisableResponseBuffering>
+  <EnableResponseBuffering>true</EnableResponseBuffering>
   <QueryCRS>EPSG:4326</QueryCRS>
   <QueryCRS>EPSG:32615</QueryCRS>
+  <Strict>true</Strict>
 </deegreeWFS>
