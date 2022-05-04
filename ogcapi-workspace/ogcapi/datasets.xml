@@ -1,0 +1,12 @@
+<Datasets configVersion="3.4.0"
+                        xmlns="http://www.deegree.org/ogcapi/datasets"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://www.deegree.org/ogcapi/datasets  http://schemas.deegree.org/ogcapi/datasets/3.4.0/datasets.xsd">
+  <Title>Datasets des LGV HH</Title>
+  <Description><![CDATA[Testdaten des <a href="https://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/" target="_blank">LGV HH</a>]]></Description>
+  <Contact>
+    <Name>LGV Hamburg</Name>
+    <Url>https://www.hamburg.de</Url>
+    <EMail>info@hamburg.de</EMail>
+  </Contact>
+</Datasets>
