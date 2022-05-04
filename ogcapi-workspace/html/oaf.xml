@@ -1,0 +1,18 @@
+<HtmlView configVersion="3.4.0"
+          xmlns="http://www.deegree.org/ogcapi/htmlview"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.deegree.org/ogcapi/htmlview http://schemas.deegree.org/ogcapi/3.4.0/htmlview.xsd">
+
+  <CssFile>../html/lgv.css</CssFile>
+  <LegalNoticeUrl>https://www.lat-lon.de/Impressum.html</LegalNoticeUrl>
+  <PrivacyPolicyUrl>https://www.lat-lon.de/Datenschutz.html</PrivacyPolicyUrl>
+  <DocumentationUrl>https://oaf.lat-lon.de/deegree-services-oaf/documentation/index.html</DocumentationUrl>
+  <Map>
+    <WMSUrl version="1.3.0">https://sgx.geodatenzentrum.de/wms_topplus_open</WMSUrl>
+    <WMSLayers>web_grau</WMSLayers>
+    <CrsProj4Definition code="EPSG:25832">+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs
+    </CrsProj4Definition>
+    <Source><![CDATA[© <a href="https://sg.geodatenzentrum.de/web_public/Datenquellen_TopPlus_Open.pdf" target="_new">Datenquellen</a>]]></Source>
+  </Map>
+
+</HtmlView>

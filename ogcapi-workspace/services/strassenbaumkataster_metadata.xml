@@ -1,0 +1,34 @@
+<deegreeServicesMetadata configVersion="3.4.0"
+                         xmlns="http://www.deegree.org/services/metadata"
+                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                         xsi:schemaLocation="http://www.deegree.org/services/metadata http://schemas.deegree.org/services/metadata/3.4.0/metadata.xsd">
+
+  <ServiceIdentification>
+    <Title>Strassenbaumkataster Hamburg</Title>
+    <Abstract><![CDATA[Testdaten des <a href="https://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/" target="_blank">LGV HH</a> - deegree OGC API - Features]]></Abstract>
+  </ServiceIdentification>
+
+  <ServiceProvider>
+    <ProviderName>Landesbetrieb Geoinformation und Vermessung</ProviderName>
+    <ProviderSite>http://unused/but/mandatory</ProviderSite>
+    <ServiceContact>
+      <IndividualName>UNUSED BUT MANDATORY</IndividualName>
+      <PositionName>UNUSED BUT MANDATORY</PositionName>
+      <ElectronicMailAddress>info@gv.hamburg.de</ElectronicMailAddress>
+      <OnlineResource>https://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/</OnlineResource>
+      <Role>UNUSED BUT MANDATORY</Role>
+    </ServiceContact>
+  </ServiceProvider>
+
+  <DatasetMetadata>
+    <MetadataUrlTemplate>https://metaver.de/csw?REQUEST=GetRecordById&amp;SERVICE=CSW&amp;VERSION=2.0.2&amp;elementSetName=full&amp;id=${metadataSetId}</MetadataUrlTemplate>
+    <MetadataUrlTemplate format="text/html">https://metaver.de/trefferanzeige?docuuid=${metadataSetId}</MetadataUrlTemplate>
+    <Dataset>
+      <Name xmlns:app="http://www.deegree.org/app">app:strassenbaumkataster</Name>
+      <Title>Strassenbaumkataster</Title>
+      <Abstract><![CDATA[Strassenbaumkataster der <a href="https://www.hamburg.de" target="_blank">Stadt Hamburg</a>]]></Abstract>
+      <MetadataSetId>C1C61928-C602-4E37-AF31-2D23901E2540</MetadataSetId>
+    </Dataset>
+  </DatasetMetadata>
+
+</deegreeServicesMetadata>

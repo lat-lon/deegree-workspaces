@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SQLFeatureStore configVersion="3.4.0"
+  xmlns="http://www.deegree.org/datasource/feature/sql" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+  xsi:schemaLocation="http://www.deegree.org/datasource/feature/sql http://schemas.deegree.org/datasource/feature/sql/3.4.0/sql.xsd">
+  <JDBCConnId>oaf_db</JDBCConnId>
+  <FeatureTypeMapping name="KitaEinrichtungen" table="kita.kita_einrichtung">
+    <FIDMapping>
+      <Column name="einrichtung_einrnr" />
+    </FIDMapping>
+    <Primitive mapping="einrichtung_name" path="Name" />
+    <Primitive mapping="einrichtung_name_normalisiert" path="Name_normalisiert" />
+    <Primitive mapping="einrichtung_einrnr" path="Einrichtungsnummer" />
+    <Primitive mapping="einrichtung_telefon" path="Telefon" />
+    <Primitive mapping="einrichtung_fax" path="Fax" />
+    <Primitive mapping="einrichtung_strasse" path="Strasse" />
+    <Primitive mapping="einrichtung_hausnr" path="Hausnr" />
+    <Primitive mapping="einrichtung_hausnr_alpha" path="Hausnr_alpha" />
+    <Primitive mapping="einrichtung_plz" path="PLZ" />
+    <Primitive mapping="einrichtung_ort" path="Ort" />
+    <Primitive mapping="stadtteil_name" path="Stadtteil">
+      <Join fromColumns="einrichtung_statgebiet" table="kita.kita_bezirk_stadtteil_info" toColumns="vkstageb_nr" />
+    </Primitive>
+    <Primitive mapping="bezirk_name" path="Bezirk">
+      <Join fromColumns="einrichtung_statgebiet" table="kita.kita_bezirk_stadtteil_info" toColumns="vkstageb_nr" />
+    </Primitive>
+    <Primitive mapping="traeger_name" path="Traeger">
+      <Join fromColumns="einrichtung_traegernr" table="kita.kita_traeger_spitzenverband" toColumns="traeger_nr" />
+    </Primitive>
+    <Primitive mapping="spitzenverb_name" path="Spitzenverband">
+      <Join fromColumns="einrichtung_traegernr" table="kita.kita_traeger_spitzenverband" toColumns="traeger_nr" />
+    </Primitive>
+    <Primitive mapping="einrichtung_ansprechpartner" path="Ansprechpartner" />
+    <Primitive mapping="leistung_name" path="Leistungsname">
+      <Join fromColumns="einrichtung_einrnr" table="kita.kita_leistung" toColumns="leistung_einrichtung_nr" />
+    </Primitive>
+    <Primitive mapping="einrichtung_zusatztextleistung" path="Zusatztextleistung" />
+    <Primitive mapping="einrichtung_zusatztextkita" path="Zusatztextkita" />
+    <Primitive mapping="er_refs_url" path="Informationen">
+      <Join fromColumns="einrichtung_einrnr" table="kita.kita_er_refs" toColumns="er_refs_einrichtung_nr" />
+    </Primitive>
+    <Primitive mapping="er_refs_email" path="E-Mail">
+      <Join fromColumns="einrichtung_einrnr" table="kita.kita_er_refs" toColumns="er_refs_einrichtung_nr" />
+    </Primitive>
+    <Primitive mapping="leistungsart_name" path="Leistungsarten" />
+    <Geometry mapping="the_geom" path="geom">
+      <StorageCRS srid="25832">EPSG:25832</StorageCRS>
+    </Geometry>
+  </FeatureTypeMapping>
+</SQLFeatureStore>
