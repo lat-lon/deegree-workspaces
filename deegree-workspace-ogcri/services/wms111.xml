@@ -6,5 +6,5 @@
   <wms:ServiceConfiguration>
     <wms:ThemeId>theme</wms:ThemeId>
   </wms:ServiceConfiguration>
-
+<wms:Strict>true</wms:Strict>
 </wms:deegreeWMS>

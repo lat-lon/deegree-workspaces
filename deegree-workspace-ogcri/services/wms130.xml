@@ -18,5 +18,6 @@
     <wms:GetMapFormat>image/png</wms:GetMapFormat>
     <wms:GetMapFormat>image/png; subtype=8bit</wms:GetMapFormat>
   </wms:GetMapFormats-->
+<wms:Strict>true</wms:Strict> 
 
 </wms:deegreeWMS>
