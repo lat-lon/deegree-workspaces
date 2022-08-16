@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<SQLFeatureStore configVersion="3.4.0"
-  xmlns="http://www.deegree.org/datasource/feature/sql" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-  xsi:schemaLocation="http://www.deegree.org/datasource/feature/sql http://schemas.deegree.org/datasource/feature/sql/3.4.0/sql.xsd">
+<SQLFeatureStore configVersion="3.5.0"
+                 xmlns="http://www.deegree.org/datasource/feature/sql"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://www.deegree.org/datasource/feature/sql https://schemas.deegree.org/3.5/datasource/feature/sql/sql.xsd">
+                 
   <JDBCConnId>oaf_db</JDBCConnId>
   <FeatureTypeMapping name="KitaEinrichtungen" table="kita.kita_einrichtung">
     <FIDMapping>
