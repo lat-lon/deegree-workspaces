@@ -1,0 +1,22 @@
+Data Copyright and Licenses
+----------------------
+
+Polygon and point vector data:
+
+Data originates from OpenStreetMap (https://www.openstreetmap.org), licensed under the Creative Commons Attribution-ShareAlike 2.0 license (CC BY-SA). For more information see: https://www.openstreetmap.org/copyright
+
+
+Raster data (exported as Geotiff):
+
+Diese Datei wurde mit TIM-online erstellt.
+Produkt: Digitale Topographische Karte 1 : 50 000
+Datei: 2022-12-08-16-00-timonline.txt
+Koordinatenreferenzsystem: ETRS89 / UTM zone 32N (EPSG:25832)
+Format: *.tiff (georeferenziert)
+Kacheln: 32360_5696
+Datum: 2022-12-08-16-00
+
+Diese Daten stehen unter der Datenlizenz Deutschland – Zero – Version 2.0, jede Nutzung ist ohne Einschränkungen oder Bedingungen zulässig. Informationen dazu finden Sie hier:
+http://www.bezreg-koeln.nrw.de/brk_internet/geobasis/lizenzbedingungen_geobasis_nrw.pdf
+
+dtk50_32_360_5696_8_nw_col; https://www.wcs.nrw.de/geobasis/wcs_nw_dtk50?REQUEST=GetCoverage&SERVICE=WCS&VERSION=2.0.1&COVERAGEID=nw_dtk50_col&FORMAT=image/tiff&SUBSET=x(360000,368000)&SUBSET=y(5696000,5704000)&OUTFILE=dtk50_32_360_5696_8_nw_col&APP=timonline
