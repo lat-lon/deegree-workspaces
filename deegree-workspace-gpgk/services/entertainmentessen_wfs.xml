@@ -10,7 +10,6 @@
 
   <FeatureStoreId>entertainmentessen_fs</FeatureStoreId>
 
-  <QueryCRS>urn:ogc:def:crs:EPSG::4258</QueryCRS>
   <QueryCRS>urn:ogc:def:crs:EPSG::4326</QueryCRS>
   <QueryMaxFeatures>-1</QueryMaxFeatures>
   <QueryCheckAreaOfUse>false</QueryCheckAreaOfUse>
