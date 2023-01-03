@@ -1,7 +1,7 @@
 <JDBCConnection configVersion="3.4.0" xmlns="http://www.deegree.org/jdbc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.deegree.org/jdbc http://schemas.deegree.org/jdbc/3.4.0/jdbc.xsd">
 
- <Url>jdbc:sqlite:/root/.deegree/deegree-workspace-gpgk/data/entertainment_essen.gpkg</Url>
+ <Url>jdbc:sqlite:/root/.deegree/deegree-workspace-gpkg/data/entertainment_essen.gpkg</Url>
  <User>null</User>
  <Password>null</Password>
 
