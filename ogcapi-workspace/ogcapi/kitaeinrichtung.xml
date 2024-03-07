@@ -1,5 +1,4 @@
-<deegreeOAF configVersion="3.4.0"
-            xmlns="http://www.deegree.org/ogcapi/features"
+<deegreeOAF xmlns="http://www.deegree.org/ogcapi/features"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://www.deegree.org/ogcapi/features http://schemas.deegree.org/ogcapi/features/3.4.0/features.xsd">
 
