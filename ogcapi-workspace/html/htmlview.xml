@@ -1,5 +1,4 @@
-<HtmlView configVersion="3.4.0"
-          xmlns="http://www.deegree.org/ogcapi/htmlview"
+<HtmlView xmlns="http://www.deegree.org/ogcapi/htmlview"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.deegree.org/ogcapi/htmlview http://schemas.deegree.org/ogcapi/3.4.0/htmlview.xsd">
 
