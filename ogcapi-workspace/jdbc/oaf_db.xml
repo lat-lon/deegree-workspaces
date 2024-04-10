@@ -4,7 +4,7 @@
                               xsi:schemaLocation="http://www.deegree.org/connectionprovider/datasource http://schemas.deegree.org/jdbc/datasource/3.4.0/datasource.xsd">
 
   <!-- Creation / lookup of javax.sql.DataSource instance -->
-  <DataSource javaClass="org.apache.commons.dbcp.BasicDataSource" destroyMethod="close"/>
+  <DataSource javaClass="org.apache.commons.dbcp2.BasicDataSource" destroyMethod="close"/>
 
   <!-- Configuration of DataSource properties -->
   <Property name="driverClassName" value="org.postgresql.Driver" />
