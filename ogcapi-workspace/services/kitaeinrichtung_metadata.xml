@@ -1,45 +1,7 @@
 <deegreeServicesMetadata xmlns="http://www.deegree.org/services/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.deegree.org/services/metadata https://schemas.deegree.org/core/3.5/services/metadata/metadata.xsd">
   <ServiceIdentification>
     <Title>Kita Einrichtungen Hamburg</Title>
-    <Abstract><![CDATA[Es werden täglich zwei Dateien generiert:
-
-1.	Kita_Einrichtung.csv
-2.	Kita_Einrichtung_Leistung.csv
-
-Die Datei Kita_Einrichtung.csv stellt für jede Kindertagesstätte genau eine Zeile mit Informationen bereit und ist nach der ersten Spalte KITAEinrichtung_EinrNr aufsteigend sortiert.
-
-Die Datei Kita_Einrichtung_Leistung.csv beinhaltet sämtliche angebotenen Leistungen der Kindertagesstätten und ist ebenfalls nach der ersten Spalte KITAEinrichtung_EinrNr aufsteigend sortiert.
-
-Format
-Die Dateien sind unter der UTF-8 Codepage erstellt worden. Das Zeilenende ist mit Carriage Return (=Wagenrücklauf) + Line Feed (=Zeilenvorschub) gekennzeichnet. Die Spalten sind durch das Trennzeichen ^ (=Hütchen) separiert.
-
-Datenstruktur
-Die erste Zeile der Dateien ist mit dem Inhalt sep=^ für die Bearbeitung mit dem Programm Microsoft Excel optimiert. Wird nicht mit Excel gearbeitet, so ist diese Zeile zu ignorieren. Allerdings betrachtet Excel alle csv-Dateien grundsätzlich als ANSI-codiert und wandelt nicht automatisch nach UTF-8 um, so dass bspw. die Umlaute nicht korrekt dargestellt werden. Daher wird an dieser Stelle für den Import der Daten nach Excel ausdrücklich die Nutzung des excelinternen Textkonvertierungs-Assistenten empfohlen, da dort alle nötigen Einstellungen für einen fehlerfreien Import vorgenommen werden können. 
-
-Die zweite Zeile der Dateien enthält die Spaltenüberschriften.
-Ab der dritten Zeile bis Dateiende befinden sich die exportierten Datensätze der Kita-Datenbank.
-
-
-Spaltendefinition der Datei Kita_Einrichtung.csv
-1.	KITAEinrichtung_EinrNr			Primärschlüssel, integer, NOT NULL
-2.	KITAEinrichtung_Name			nvarchar(100), NULL
-3.	KITAEinrichtung_Strasse			nvarchar(100), NULL
-4.	KITAEinrichtung_HausNr			integer, NULL
-5.	KITAEinrichtung_HausNr_Alpha		                 char(6), NULL
-6.	KITAEinrichtung_PLZ			                 integer, NULL
-7.	KITAEinrichtung_Ort				nvarchar(30), NULL
-8.	Stadtteil_Name				nvarchar(30), NULL
-9.	KITABezirk_Name				nvarchar(15), NULL
-10.	KITAEinrichtung_AnsprechPartner		                 nvarchar(100), NULL
-11.	KITAEinrichtung_Telefon			nvarchar(40), NULL
-12.	KITAEinrichtung_Fax				nvarchar(50), NULL
-13.	KITATraeger_Name				nvarchar(250), NULL
-14.	KITAEr_refs_URL				nvarchar(100), NULL
-15.	KITAEr_refs_Email				nvarchar(100), NULL
-
-Spaltendefinition der Datei Kita_Einrichtung_Leistung.csv
-1.	KITAEinrichtung_EinrNr			integer, NOT NULL
-2.	KITALeistung_Name				nvarchar(100), NULL]]></Abstract>
+    <Abstract>Kita Einrichtungen Hamburg</Abstract>
   </ServiceIdentification>
   <ServiceProvider>
     <ProviderName>LGV Hamburg</ProviderName>
